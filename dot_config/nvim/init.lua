@@ -1,0 +1,6 @@
+require("plugins")
+require("configs")
+require("mappings")
+require("user-settings")
+require("lsp-config")
+require("treesitter-config")
