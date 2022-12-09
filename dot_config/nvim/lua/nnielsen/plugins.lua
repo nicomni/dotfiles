@@ -63,6 +63,7 @@ local packages = {
 	--}}}
 
 	--{{{ UI
+	["tokyonight"] = { "folke/tokyonight.nvim" },
 	["nvim-web-devicons"] = { "kyazdani42/nvim-web-devicons" },
 	["lualine"] = { "nvim-lualine/lualine.nvim" },
 	["tabline"] = { "kdheepak/tabline.nvim" },

@@ -29,6 +29,7 @@ set.list = true
 set.hidden = true
 
 set.background = "dark"
+cmd([[colorscheme tokyonight]])
 
 set.cmdheight = 2
 
