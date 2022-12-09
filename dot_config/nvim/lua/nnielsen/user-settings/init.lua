@@ -29,7 +29,6 @@ set.list = true
 set.hidden = true
 
 set.background = "dark"
-cmd("colorscheme dracula")
 
 set.cmdheight = 2
 
