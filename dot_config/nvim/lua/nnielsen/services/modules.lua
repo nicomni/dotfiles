@@ -12,7 +12,7 @@ local enabled_modules = {
 		["tmux"] = true,
 		["ui"] = true,
 		["vim-surround"] = false,
-		["vim-unimpaired"] = false,
+		["vim-unimpaired"] = true,
 	},
 	langs = {},
 }
@@ -20,7 +20,7 @@ local enabled_modules = {
 local required_modules = {
 	core = {
 		["core"] = true,
-		["treesitter"] = false,
+		["treesitter"] = true,
 	},
 }
 
