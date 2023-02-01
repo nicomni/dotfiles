@@ -19,7 +19,7 @@ fi
 # {{{ Oh My Zsh settings
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/nicolajnielsen/.oh-my-zsh"
+export ZSH="/Users/nnielsen/.oh-my-zsh"
 
 # {{{ Plugins
 # Which plugins would you like to load?
@@ -134,10 +134,10 @@ source $ZSH/oh-my-zsh.sh
 
 # {{{ Set some important path variables
 
-export PATH="/Users/nicolajnielsen/.local/bin:$PATH"
+export PATH="/Users/nnielsen/.local/bin:$PATH"
 
 # Add GOBIN to path
-export PATH=$PATH:/Users/nicolajnielsen/go/bin
+export PATH=$PATH:/Users/nnielsen/go/bin
 
 # }}}
 
@@ -208,14 +208,14 @@ export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 
 # {{{ >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/nicolajnielsen/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/nnielsen/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
   ##eval "$__conda_setup"
 else
-  ##if [ -f "/Users/nicolajnielsen/miniconda3/etc/profile.d/conda.sh" ]; then
-      ##. "/Users/nicolajnielsen/miniconda3/etc/profile.d/conda.sh"
+  ##if [ -f "/Users/nnielsen/miniconda3/etc/profile.d/conda.sh" ]; then
+      ##. "/Users/nnielsen/miniconda3/etc/profile.d/conda.sh"
   ##else
-      ##export PATH="/Users/nicolajnielsen/miniconda3/bin:$PATH"
+      ##export PATH="/Users/nnielsen/miniconda3/bin:$PATH"
   ##fi
 fi
 unset __conda_setup
