@@ -77,8 +77,6 @@ lsp.configs = {
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
-		-- local servers = { 'tsserver', 'sumneko_lua' }
-
 		local default_flags = { debounce_text_changes = 150 }
 
 		-- tsserver
@@ -151,8 +149,8 @@ lsp.configs = {
 		--  }
 		--}
 
-		-- sumneko_lua
-		lspconfig["sumneko_lua"].setup({
+		-- lua_ls
+		lspconfig["lua_ls"].setup({
 			on_attach = custom_on_attach,
 			capabilities = capabilities,
 			flags = default_flags,
