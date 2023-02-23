@@ -19,7 +19,7 @@ map({'i', 'n'}, '<leader>ff', function()
         tsbuiltin.find_files(tsthemes.get_ivy()) end , opts)
 
 -- Fuzzy find current buffer with Telescope
-map('n', '<C-_>', function()
+map('n', '<C-/>', function()
         tsbuiltin.current_buffer_fuzzy_find(tsthemes.get_ivy())
 end , opts)
 
