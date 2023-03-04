@@ -35,3 +35,6 @@ set.cmdheight = 2
 
 --set.conceallevel=3
 vim.g["pandoc#syntax#conceal#urls"] = 1
+
+-- path to node. see :h g:node_host_prog
+vim.g.node_host_prog = '/Users/nnielsen/.nvm/versions/node/v16.17.0/bin/node'
