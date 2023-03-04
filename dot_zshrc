@@ -28,14 +28,14 @@ export ZSH="/Users/nnielsen/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git gh macos brew zsh-syntax-highlighting zsh-autosuggestions wd
-  aliases common-aliases nvm npm node pyenv tmux golang)
+  aliases common-aliases nvm npm node pyenv golang)
 
 # {{{ TMUX Plugin settings
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOQUIT=true
-ZSH_TMUX_AUTOCONNECT=true
-ZSH_TMUX_DEFAULT_SESSION_NAME="default"
-ZSH_TMUX_TERMFIX=false
+# ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOQUIT=true
+# ZSH_TMUX_AUTOCONNECT=true
+# ZSH_TMUX_DEFAULT_SESSION_NAME="default"
+# ZSH_TMUX_TERMFIX=false
 # }}}
 
 
