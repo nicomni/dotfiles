@@ -96,58 +96,43 @@ lsp.configs = {
 			},
 		})
 		-- jsonls
-		--nvim_lsp['jsonls'].setup {
-		--  on_attach = custom_on_attach,
-		--  capabilities = capabilities,
-		--  flags = default_flags,
-		--  settings = {
-		--    json = {
-		--      schemas = {
-		--        -- Ref: https://github.com/neovim/nvim-lspconfig/issues/229#issuecomment-626439899
-		--        {
-		--          description = 'TypeScript compiler configuration file',
-		--          fileMatch = {'tsconfig.json', 'tsconfig.*.json'},
-		--          url = 'http://json.schemastore.org/tsconfig'
-		--        },
-		--        --{
-		--        --  description = 'Lerna config',
-		--        --  fileMatch = {'lerna.json'},
-		--        --  url = 'http://json.schemastore.org/lerna'
-		--        --},
-		--        {
-		--          description = 'Babel configuration',
-		--          fileMatch = {'.babelrc.json', '.babelrc', 'babel.config.json'},
-		--          url = 'http://json.schemastore.org/lerna'
-		--        },
-		--        {
-		--          description = 'ESLint config',
-		--          fileMatch = {'.eslintrc.json', '.eslintrc'},
-		--          url = 'http://json.schemastore.org/eslintrc'
-		--        },
-		--        --{
-		--        --  description = 'Bucklescript config',
-		--        --  fileMatch = {'bsconfig.json'},
-		--        --  url = 'https://bucklescript.github.io/bucklescript/docson/build-schema.json'
-		--        --},
-		--        {
-		--          description = 'Prettier config',
-		--          fileMatch = {'.prettierrc', '.prettierrc.json', 'prettier.config.json'},
-		--          url = 'http://json.schemastore.org/prettierrc'
-		--        },
-		--        --{
-		--        --  description = 'Vercel Now config',
-		--        --  fileMatch = {'now.json'},
-		--        --  url = 'http://json.schemastore.org/now'
-		--        --},
-		--        --{
-		--        --  description = 'Stylelint config',
-		--        --  fileMatch = {'.stylelintrc', '.stylelintrc.json', 'stylelint.config.json'},
-		--        --  url = 'http://json.schemastore.org/stylelintrc'
-		--        --},
-		--      }
-		--    },
-		--  }
-		--}
+		lspconfig["jsonls"].setup({
+			on_attach = custom_on_attach,
+			capabilities = capabilities,
+			flags = default_flags,
+			settings = {
+				json = {
+					schemas = {
+						-- Ref: https://github.com/neovim/nvim-lspconfig/issues/229#issuecomment-626439899
+						{
+							description = "TypeScript compiler configuration file",
+							fileMatch = { "tsconfig.json", "tsconfig.*.json" },
+							url = "http://json.schemastore.org/tsconfig",
+						},
+						{
+							description = "Babel configuration",
+							fileMatch = { ".babelrc.json", ".babelrc", "babel.config.json" },
+							url = "http://json.schemastore.org/lerna",
+						},
+						{
+							description = "ESLint config",
+							fileMatch = { ".eslintrc.json", ".eslintrc" },
+							url = "http://json.schemastore.org/eslintrc",
+						},
+						{
+							description = "Prettier config",
+							fileMatch = { ".prettierrc", ".prettierrc.json", "prettier.config.json" },
+							url = "http://json.schemastore.org/prettierrc",
+						},
+						{
+							description = "Lua_ls config file",
+							fileMatch = { ".luarc", ".luarc.json", ".luarc.jsonc" },
+							url = "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+						},
+					},
+				},
+			},
+		})
 
 		-- lua_ls
 		lspconfig["lua_ls"].setup({
