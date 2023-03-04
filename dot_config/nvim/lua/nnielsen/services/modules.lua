@@ -9,6 +9,7 @@ local enabled_modules = {
 		["pandoc"] = false,
 		["tabular"] = true,
 		["telescope"] = true,
+    ["testing"] = true,
 		["tmux"] = true,
 		["ui"] = true,
 		["vim-surround"] = true,
