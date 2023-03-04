@@ -148,6 +148,13 @@ lsp.configs = {
 			},
 		})
 
+    -- pyright
+    lspconfig["pyright"].setup({
+      on_attach = custom_on_attach,
+      capabilities = capabilities,
+      flags = default_flags,
+    })
+
 		--for _, lsp in ipairs(servers) do
 		--  nvim_lsp[lsp].setup {
 		--    on_attach = custom_on_attach,
