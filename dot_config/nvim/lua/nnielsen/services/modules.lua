@@ -11,7 +11,7 @@ local enabled_modules = {
 		["telescope"] = true,
 		["tmux"] = true,
 		["ui"] = true,
-		["vim-surround"] = false,
+		["vim-surround"] = true,
 		["vim-unimpaired"] = true,
 	},
 	langs = {},
