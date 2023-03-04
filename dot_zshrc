@@ -139,6 +139,13 @@ export PATH="/Users/nnielsen/.local/bin:$PATH"
 # Add GOBIN to path
 export PATH=$PATH:/Users/nnielsen/go/bin
 
+# Completions
+fpath=(~/.zsh/completion $fpath)
+
+# }}}
+
+# {{{ Load Completions
+autoload -Uz compinit && compinit -i
 # }}}
 
 # {{{ Java
