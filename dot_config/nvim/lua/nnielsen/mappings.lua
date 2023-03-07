@@ -37,4 +37,6 @@ map("n", "<leader>ev", "<cmd>tabedit $MYVIMRC<CR>", opts)
 -- Source init.lua
 map("n", "<leader>sv", "<cmd>luafile $MYVIMRC<CR>", opts)
 
+map("i", "<tab><tab>", "<c-x><c-o>", opts)
+
 -- vim: fdm=marker foldenable
