@@ -183,6 +183,7 @@ alias vimdiff="nvim -d"
 alias zshconf="chezmoi edit ~/.zshrc"
 alias vimconf="chezmoi edit ~/.config/nvim/init.lua"
 alias tmuxconf="chezmoi edit ~/.tmux.conf"
+alias cm="chezmoi"
 
 # Requires trash-cli to be in path.
 # See: https://github.com/sindresorhus/trash-cli
