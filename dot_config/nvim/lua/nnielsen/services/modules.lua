@@ -9,13 +9,15 @@ local enabled_modules = {
 		["pandoc"] = false,
 		["tabular"] = true,
 		["telescope"] = true,
-    ["testing"] = true,
+		["testing"] = true,
 		["tmux"] = true,
 		["ui"] = true,
 		["vim-surround"] = true,
 		["vim-unimpaired"] = true,
 	},
-	langs = {},
+	langs = {
+		["tex"] = true,
+	},
 }
 
 local required_modules = {

@@ -4,7 +4,7 @@ local tex = {}
 tex.packages = {
 	["vimtex"] = {
 		"lervag/vimtex",
-		opt = true,
+		ft = { "tex" },
 	},
 }
 

@@ -23,6 +23,9 @@ treesitter.configs = {
 				"tsx",
 			},
 
+			-- Ignore latex. See :h vimtex-faq-treesitter
+			ignore_install = { "latex" },
+
 			sync_install = false,
 
 			auto_install = true,
