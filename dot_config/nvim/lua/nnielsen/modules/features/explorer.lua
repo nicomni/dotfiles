@@ -15,11 +15,7 @@ explorer.configs = {
 			view = {
 				width = 50,
 			},
-			actions = {
-				change_dir = {
-					global = true,
-				},
-			},
+			sync_root_with_cwd = true,
 		})
 	end,
 }
