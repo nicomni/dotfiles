@@ -37,4 +37,8 @@ set.cmdheight = 2
 vim.g["pandoc#syntax#conceal#urls"] = 1
 
 -- path to node. see :h g:node_host_prog
-vim.g.node_host_prog = '/Users/nnielsen/.nvm/versions/node/v16.17.0/bin/node'
+vim.g.node_host_prog = "/Users/nnielsen/.nvm/versions/node/v16.17.0/bin/node"
+
+-- use treesitter foldexpr
+set.foldmethod = "expr"
+set.foldexpr = "nvim_treesitter#foldexpr()"
