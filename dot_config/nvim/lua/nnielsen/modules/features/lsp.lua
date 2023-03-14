@@ -148,12 +148,12 @@ lsp.configs = {
 			},
 		})
 
-    -- pyright
-    lspconfig["pyright"].setup({
-      on_attach = custom_on_attach,
-      capabilities = capabilities,
-      flags = default_flags,
-    })
+		-- pyright
+		lspconfig["pyright"].setup({
+			on_attach = custom_on_attach,
+			capabilities = capabilities,
+			flags = default_flags,
+		})
 
 		--for _, lsp in ipairs(servers) do
 		--  nvim_lsp[lsp].setup {
@@ -213,6 +213,8 @@ lsp.configs = {
 		local sources = {
 			formatting.stylua,
 			formatting.prettierd,
+			formatting.black,
+			formatting.isort,
 		}
 
 		-- Avoiding LSP formatting conflicts
