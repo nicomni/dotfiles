@@ -209,7 +209,7 @@ export MANPAGER="nvim +Man!"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# NORMAL ALIASES
+# {{{ NORMAL ALIASES
 alias nvim="nvim --listen /tmp/nvimsocket"
 alias vim="nvim"
 alias oldvim="\vim"
@@ -238,19 +238,21 @@ alias clr="clear"
 alias home="cd ~"
 
 alias zr="source ~/.zshrc"
-
-# GLOBAL ALIASES
+# }}}
+#
+# {{{ GLOBAL ALIASES
 alias -g L="| less"
 alias -g J="| jq"
+# }}}
 
-# FUNCTION ALIASES
+# {{{ FUNCTION ALIASES
 function dnd(){
   echo $1 $2 | shortcuts run "Sett fokus" | cat
 }
 
 # use gitignore.io from command line, e.g. `gi java,python >> .gitignore`
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
-
+# }}}
 # }}}
 
 # {{{ Set TTY for GPG-Agent
