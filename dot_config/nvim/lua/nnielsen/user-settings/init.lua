@@ -5,7 +5,7 @@ set.shiftwidth = 2
 set.expandtab = true
 set.smarttab = true
 set.textwidth = 78
-set.colorcolumn = { "+1", "+2", "+3" }
+set.colorcolumn = { "+1", "+2" }
 
 set.incsearch = true
 set.ignorecase = true
@@ -37,7 +37,7 @@ set.cmdheight = 2
 vim.g["pandoc#syntax#conceal#urls"] = 1
 
 -- path to node. see :h g:node_host_prog
-vim.g.node_host_prog = "/Users/nnielsen/.nvm/versions/node/v16.17.0/bin/node"
+vim.g.node_host_prog = "/Users/nnielsen/.nvm/versions/node/v18.15.0/lib/node_modules/neovim/bin/cli.js"
 
 -- use treesitter foldexpr
 set.foldmethod = "expr"
