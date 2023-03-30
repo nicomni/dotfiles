@@ -38,6 +38,10 @@ plugins=(git gh macos brew zsh-syntax-highlighting zsh-autosuggestions wd
 # ZSH_TMUX_TERMFIX=false
 # }}}
 
+# {{{ZSH_AUTOSUGGEST settings
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffaa00"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+# }}}
 
 # }}}
 
@@ -134,26 +138,6 @@ source $ZSH/oh-my-zsh.sh
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/nnielsen/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-  ##eval "$__conda_setup"
-else
-  ##if [ -f "/Users/nnielsen/miniconda3/etc/profile.d/conda.sh" ]; then
-      ##. "/Users/nnielsen/miniconda3/etc/profile.d/conda.sh"
-  ##else
-      ##export PATH="/Users/nnielsen/miniconda3/bin:$PATH"
-  ##fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-# }}}
-
-# {{{ FZM
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# }}}
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/nnielsen/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
     if [ -f "/Users/nnielsen/miniconda3/etc/profile.d/conda.sh" ]; then
@@ -164,6 +148,12 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+# }}}
+
+# {{{ FZM
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# }}}
+
 # {{{ My personal configuration
 
 # {{{ Set some important path variables
@@ -219,26 +209,21 @@ alias vimconf="chezmoi edit ~/.config/nvim/init.lua"
 alias tmuxconf="chezmoi edit ~/.tmux.conf"
 alias cm="chezmoi"
 alias tree="tree -C --gitignore"
-
 # Requires trash-cli to be in path.
 # See: https://github.com/sindresorhus/trash-cli
 alias rm="trash"
-
 # Enable or disable sleep in battery mode 
 # when the lid is closed (requires root permission)
 alias sleepoff="sudo pmset -b disablesleep 1"
 alias sleepon="sudo pmset -b disablesleep 0"
-
 # gls requires 'coreutils' to be installed with homebrew.
 # See: https://formulae.brew.sh/formula/coreutils
 alias l="gls -lFh --color --group-directories-first"
 alias la="gls -lAFh --color --group-directories-first"
-
 alias clr="clear"
-
 alias home="cd ~"
-
 alias zr="source ~/.zshrc"
+alias v="fd --type f --hidden --follow --exclude .git | fzf --reverse --preview 'bat --color=always {}' | xargs nvim --listen /tmp/nvimsocket"
 # }}}
 #
 # {{{ GLOBAL ALIASES
