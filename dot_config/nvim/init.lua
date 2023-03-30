@@ -1,7 +1,2 @@
-require("nnielsen.globals")
-local modules = require("nnielsen.services.modules")
-modules.init()
-modules.load()
--- require("nnielsen.plugins")
-require("nnielsen.mappings")
-require("nnielsen.user-settings")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

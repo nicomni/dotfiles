@@ -1,0 +1,8 @@
+{
+  "workspace.library": [
+    "/Users/nnielsen/.local/share/nvim/lazy/tokyonight.nvim/lua",
+    "/Users/nnielsen/.local/share/nvim/lazy/LazyVim/lua",
+    "/Users/nnielsen/.local/share/nvim/lazy/lazy.nvim/lua",
+    "/Users/nnielsen/.local/share/nvim/lazy/which-key.nvim/lua"
+  ]
+}
