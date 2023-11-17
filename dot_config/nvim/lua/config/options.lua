@@ -6,3 +6,4 @@ local g = vim.g
 set.winbar = "%=%m %f"
 g.python3_host_prog = '/Users/nnielsen/.pyenv/versions/py3nvim/bin/python'
 set.guifont = 'Hack Nerd Font'
+set.foldlevel = 99
