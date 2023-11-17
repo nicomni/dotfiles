@@ -29,4 +29,19 @@ if Util.has("neotest") then
   keymaps["<leader>t"] = { name = "+neotest", mode = { "n", "v" } }
 end
 
+if Util.has("nvim-dap") then
+  keymaps["<leader>d"] = {
+    name = "+debug",
+    s = { name = "+step" }
+  }
+end
+
+if Util.has("neotest") and Util.has("nvim-dap") then
+  keymaps["<leader>td"] = {
+    name = "+debug",
+    n = { function() require("neotest").run.run({ strategy = "dap" }) end, "Debug nearest" },
+    l = { function() require("neotest").run.run_last({ strategy = "dap" }) end, "Debug last" }
+  }
+end
+
 wk.register(keymaps)
