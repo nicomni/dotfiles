@@ -2,28 +2,18 @@ local nls = require("null-ls")
 return {
   {
     "neovim/nvim-lspconfig",
+    version = false,
+    ---@class PluginLspOpts
     opts = {
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
-        lua_ls = {
-          settings = {
-            Lua = {
-              runtime = {
-                version = 'LuaJIT',
-              },
-              diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = { 'vim' },
-              },
-            }
-          }
-        },
+        texlab = {},
       },
     },
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     opts = {
       sources = {
         nls.builtins.formatting.isort,
@@ -31,4 +21,16 @@ return {
       },
     },
   },
+  {
+    "zbirenbaum/copilot.lua",
+    opts = {
+      server_opts_overrides = {
+        advanced = {
+          indentationMode = {
+            go = false
+          }
+        }
+      }
+    },
+  }
 }
