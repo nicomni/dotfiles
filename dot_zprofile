@@ -1,0 +1,19 @@
+# To make Homebrew's completions available in zsh, you mus get the
+# Homebrew-managed zsh site-functions on your FPATH before initialising zsh's
+# completion facility. 
+# Note: If you are using Oh My Zsh, it will call compinit for you, so this must
+# be done before you call oh-my-zsh.sh. This may be done by appending the
+# following line to your ~/.zprofile after Homebrew's initialization:
+# Reference:
+# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+#FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+# To make pyenv work in non-interactive shells
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# Set prefered editor
+export EDITOR='vi -e'
+export VISUAL='/usr/local/bin/nvim --listen /tmp/nvimsocket'
