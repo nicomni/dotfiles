@@ -15,9 +15,9 @@
 [commit]
 	gpgsign = true
 [gpg]
-{{- if eq .chezmoi.hostname "MBP-nnielsen" }}
+{{- if eq .chezmoi.arch "amd64" }}
 	program = /usr/local/bin/gpg
-{{- else if eq .chezmoi.hostname "Nicolajs-MBP" }}
+{{- else if eq .chezmoi.arch "arm64" }}
   program = /opt/homebrew/bin/gpg
 {{- end }}
 [pull]
