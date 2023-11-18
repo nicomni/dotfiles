@@ -27,13 +27,9 @@ export ZSH="{{ .chezmoi.homeDir }}/.oh-my-zsh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gh macos brew zsh-syntax-highlighting zsh-autosuggestions wd
+plugins=(git gh macos brew wd
   aliases common-aliases nvm npm node pyenv golang)
 
-# ▼ZSH_AUTOSUGGEST settings
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffaa00"
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-# ▲
 
 # ▲
 
@@ -230,6 +226,21 @@ export GPG_TTY
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 # ▲
+
+# ▲
+
+
+# ▼ zsh-syntax-highlighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# ▲
+
+# ▼ zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# ▼2 ZSH_AUTOSUGGEST settings
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffaa00"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+# ▲2
 
 # ▲
 
