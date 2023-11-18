@@ -1,0 +1,26 @@
+[user]
+	email = nicolaj.niels1@gmail.com
+	name = Nicolaj Magga Nielsen
+	signingkey = D47672203AF59945
+[core]
+	autocrlf = input
+	excludesFile = {{ .chezmoi.homeDir }}/.config/git/ignore
+[alias]
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --pretty=format:'%C(auto,red bold)%h%C(auto,reset) -%C(auto,yellow)%d%C(auto,reset) %s %C(auto,green)(%cr) %C(auto,bold blue)<%an>%C(auto,reset)' --abbrev-commit
+	lga = "!git lg --all $*"
+	lg = lg2
+[push]
+	default = simple
+[commit]
+	gpgsign = true
+[gpg]
+{{- if eq .chezmoi.hostname "MBP-nnielsen" }}
+	program = /usr/local/bin/gpg
+{{- else if eq .chezmoi.hostname "Nicolajs-MBP" }}
+  program = /opt/homebrew/bin/gpg
+{{- end }}
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
