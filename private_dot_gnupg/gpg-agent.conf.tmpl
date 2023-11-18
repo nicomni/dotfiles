@@ -1,0 +1,6 @@
+pinentry-program {{ if eq .chezmoi.arch "amd64" -}}
+/usr/local/bin/pinentry-mac
+{{ else if eq .chezmoi.arch "amd64" -}}
+/opt/homebrew/bin/pinentry-mac
+{{ end -}}
+
