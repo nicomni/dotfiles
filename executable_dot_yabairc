@@ -32,7 +32,7 @@ yabai -m config \
 echo "yabai configuration loaded.."
 
 # unmanaged apps
-yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^ExpressVPN$" manage=off
 yabai -m rule --add app="^Toggl Track$" manage=off
