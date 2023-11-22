@@ -21,8 +21,20 @@ local Util = require("lazyvim.util")
 local keymaps = {
   {
     mode = "i",
-    ["jk"] = { "<ESC>", "End insert mode" }
-  }
+    ["jk"] = { "<ESC>", "End insert mode" },
+  },
+  {
+    ["<leader>ub"] = {
+      function()
+        if vim.o.background == "light" then
+          vim.o.background = "dark"
+        elseif vim.o.background == "dark" then
+          vim.o.background = "light"
+        end
+      end,
+      "Toggle dark/light mode",
+    },
+  },
 }
 
 if Util.has("neotest") then
@@ -32,15 +44,25 @@ end
 if Util.has("nvim-dap") then
   keymaps["<leader>d"] = {
     name = "+debug",
-    s = { name = "+step" }
+    s = { name = "+step" },
   }
 end
 
 if Util.has("neotest") and Util.has("nvim-dap") then
   keymaps["<leader>td"] = {
     name = "+debug",
-    n = { function() require("neotest").run.run({ strategy = "dap" }) end, "Debug nearest" },
-    l = { function() require("neotest").run.run_last({ strategy = "dap" }) end, "Debug last" }
+    n = {
+      function()
+        require("neotest").run.run({ strategy = "dap" })
+      end,
+      "Debug nearest",
+    },
+    l = {
+      function()
+        require("neotest").run.run_last({ strategy = "dap" })
+      end,
+      "Debug last",
+    },
   }
 end
 
