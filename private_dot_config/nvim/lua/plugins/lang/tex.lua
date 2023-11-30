@@ -13,7 +13,8 @@ return {
 
       vim.g.vimtex_mappings_disable = { ["n"] = { "K" } } -- disable `K` as it conflicts with LSP hover
       vim.g.vimtex_quickfix_method = vim.fn.executable("pplatex") == 1 and "pplatex" or "latexlog"
-      vim.g.vimtex_quickfix_ignore_filters = { "Overfull", "Marginpar on page" }
+      vim.g.vimtex_quickfix_ignore_filters =
+        { "Overfull", "Marginpar on page", "The length marginparwidth is less than 2cm" }
       vim.g.vimtex_compiler_latexmk = {
         aux_dir = ".build",
         options = {
