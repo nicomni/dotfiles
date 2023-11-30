@@ -2,10 +2,10 @@
 eval $({{- if eq .chezmoi.arch "arm64" -}}/opt/homebrew{{- else -}}/usr/local{{- end -}}/bin/brew shellenv zsh)
 
 # To make pyenv work in non-interactive shells
-export PYENV_ROOT="$HOME/.pyenv"
-eval "$(pyenv init --path)"
 # Oh-my-zsh plugin 'pyenv' is responsible for loading autocompletion and
 # pyenv-virtualenv
+export PYENV_ROOT="$HOME/.pyenv"
+eval "$(pyenv init --path)"
 
 # Set prefered editor
 export EDITOR='vi -e'
