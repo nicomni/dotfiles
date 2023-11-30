@@ -89,6 +89,17 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# To make Homebrew's completions available in zsh, you mus get the
+# Homebrew-managed zsh site-functions on your FPATH before initialising zsh's
+# completion facility.
+# Note: If you are using Oh My Zsh, it will call compinit for you, so this must
+# be done before you call oh-my-zsh.sh. This may be done by appending the
+# following line to your ~/.zprofile after Homebrew's initialization:
+# Reference:
+# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+#FPATH=$({{- if eq .chezmoi.arch "arm64" -}}/opt/homebrew{{- else -}}/usr/local{{- end -}}/bin/brew --prefix)/share/zsh/site-functions:$FPATH
+# the omz plugin brew does the above
+
 # ▲ Other settings
 
 # ▲
