@@ -1,4 +1,5 @@
 # Evaluate Homebrew export statments. See `brew help shellenv`
+# Among other things this ensures that Homebrew bin comes first in the PATH
 eval $({{- if eq .chezmoi.arch "arm64" -}}/opt/homebrew{{- else -}}/usr/local{{- end -}}/bin/brew shellenv zsh)
 
 # To make pyenv work in non-interactive shells
