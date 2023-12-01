@@ -1,4 +1,13 @@
-# vim: ft=zsh
+#######################################
+# Environment variables
+#######################################
+
+export EDITOR=nvim
+export PAGER=less
+export MANPAGER="nvim +Man!"
+export ZDOTDIR=$HOME/.config/zsh
+export XDG_CONFIG_HOME=$HOME/.config
+
 # Keep only the first occurrence of a path in $path array and $PATH variable
 typeset -U path PATH
 typeset -U fpath FPATH
