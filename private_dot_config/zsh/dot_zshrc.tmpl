@@ -116,7 +116,7 @@ if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
     if [ -f "{{.chezmoi.homeDir}}/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/magganielsen/miniconda3/etc/profile.d/conda.sh"
+        . "{{.chezmoi.homeDir}}/miniconda3/etc/profile.d/conda.sh"
     else
         export PATH="{{.chezmoi.homeDir}}/miniconda3/bin:$PATH"
     fi
