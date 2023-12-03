@@ -133,40 +133,8 @@ unset __conda_setup
 
 # ▼ Set some important path variables
 
-export PATH="{{ .chezmoi.homeDir }}/.local/bin:$PATH"
-
-# Add GOBIN to path
-export PATH=$PATH:{{ .chezmoi.homeDir }}/go/bin
-
-export PATH=/usr/local/sbin:$PATH
 
 # Completions
-fpath=(~/.zsh/completion $fpath)
-
-# ▲
-
-# ▼ Load Completions
-autoload -Uz compinit && compinit -i
-# ▲
-
-# ▼ Java
-# Add Corretto OpenJDK as default java runtime
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home"
-# ▲
-
-# ▼ locale
-export LANG='en_US.UTF-8'
-export LC_ALL='en_US.UTF-8'
-# ▲
-
-# ▼ Editor
-
-# Set prefered editor
-export EDITOR='nvim'
-export VISUAL='nvim'
-
-# Use Vim as man-pager:
-export MANPAGER="nvim +Man!"
 
 # ▲
 
@@ -232,12 +200,9 @@ export GPG_TTY
 
 # ▼ Compiler settings
 # For compilers to find zlib and bzip2 compression tools installed by Homebrew
-export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 # ▲
 
 # ▲
-
 
 # ▼ zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
