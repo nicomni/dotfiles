@@ -1,4 +1,21 @@
 #######################################
+# ~/.zshenv
+#######################################
+#
+# Startup files are read in the following order:
+#   1. /etc/zshenv (not present in macOS by default)
+#   2. $HOME/.zshenv (this file)
+#   3. If the shell is a login shell:
+#     a. /etc/zprofile
+#     b. $ZDOTDIR/.zprofile
+#   4. If the shell is interactive:
+#     a. /etc/zshrc
+#     b. $ZDOTDIR/.zshrc
+#   5. If the shell is a login shell:
+#     a. /etc/zlogin
+#     b. $ZDOTDIR/.zlogin
+
+#######################################
 # Environment variables
 #######################################
 
