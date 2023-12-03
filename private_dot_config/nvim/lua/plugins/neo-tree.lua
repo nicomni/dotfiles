@@ -5,12 +5,12 @@ return {
       default_component_configs = {
         icon = {
           folder_empty = "󰜌",
-          folder_empty_open = "󰜌"
+          folder_empty_open = "󰜌",
         },
         symbols = {
           renamed = "󰁕",
-          unstaged = "󰄱"
-        }
+          unstaged = "󰄱",
+        },
       },
       source_selector = {
         tab_levels = {
@@ -18,8 +18,8 @@ return {
           buffers = " 󰈙 Buffers ",
           git_status = " 󰊢 Git ",
           diagnostics = " 󰒡 Diagnostics ",
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 }

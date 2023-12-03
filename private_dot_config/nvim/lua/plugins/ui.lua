@@ -5,9 +5,9 @@ local keys = {
       function()
         require("zen-mode").toggle()
       end,
-      desc = "Toggle Focus (Zen) mode"
-    }
-  }
+      desc = "Toggle Focus (Zen) mode",
+    },
+  },
 }
 --- @type LazyPluginSpec[]
 local ui = {
@@ -28,19 +28,18 @@ local ui = {
           options = {
             enabled = true,
             relativenumber = false,
-            number = false
+            number = false,
           },
           kitty = {
             enabled = true,
-            font = "+10"
-          }
-        }
+            font = "+10",
+          },
+        },
       })
     end,
-    keys = keys["zen-mode"]
+    keys = keys["zen-mode"],
   },
-  { "folke/twilight.nvim",
-  },
+  { "folke/twilight.nvim" },
   {
     "lukas-reineke/indent-blankline.nvim",
     opts = {
@@ -50,8 +49,8 @@ local ui = {
           "checkhealth",
           "man",
           "qf",
-        }
-      }
+        },
+      },
     },
   },
 }

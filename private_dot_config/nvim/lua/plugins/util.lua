@@ -1,6 +1,6 @@
 return {
   {
     "nvim-lua/plenary.nvim",
-    version = false
-  }
+    version = false,
+  },
 }
