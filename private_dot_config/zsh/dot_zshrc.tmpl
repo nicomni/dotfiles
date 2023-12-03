@@ -133,6 +133,9 @@ unset __conda_setup
 
 # ▼ Set some important path variables
 
+# Add go binaries to path
+path+=$(go env GOPATH)/bin
+export PATH
 
 # Completions
 
