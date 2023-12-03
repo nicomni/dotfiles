@@ -153,10 +153,11 @@ alias nvim="nvim --listen /tmp/nvimsocket"
 alias vim="nvim"
 alias oldvim="\vim"
 alias vimdiff="nvim -d"
-alias zshconf="chezmoi edit ~/.zshrc"
+alias zshconf="chezmoi edit ~/.config/zsh/.zshrc"
 alias vimconf="chezmoi edit ~/.config/nvim/init.lua"
-alias tmuxconf="chezmoi edit ~/.tmux.conf"
 alias cm="chezmoi"
+alias cms="chezmoi status"
+alias cme="chezmoi edit"
 alias tree="tree -C --gitignore"
 # Requires trash-cli to be in path.
 # See: https://github.com/sindresorhus/trash-cli
@@ -172,7 +173,7 @@ alias ll="gls -lFh --color --group-directories-first"
 alias la="gls -lAFh --color --group-directories-first"
 alias clr="clear"
 alias home="cd ~"
-alias zr="source ~/.zshrc"
+alias zr="source ~/.config/zsh/.zshrc"
 alias v="fd --type f --hidden --follow --exclude .git | fzf --reverse --preview 'bat --color=always {}' | xargs nvim --listen /tmp/nvimsocket"
 
 {{- if eq .chezmoi.hostname "MBP-nnielsen" }}
