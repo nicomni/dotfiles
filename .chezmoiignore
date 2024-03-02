@@ -47,7 +47,7 @@ Pictures
 Public
 Zotero
 go
-miniconda3
+miniforge
 repos
 Brewfile*
 texlive-packages.txt
