@@ -7,13 +7,18 @@
 # see this wiki page for information:
 #  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
 #
-# yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-# sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
 #
 
 yabai -m config \
+	mouse_follows_focus on \
+	focus_follows_mouse off \
 	window_origin_display default \
 	window_placement second_child \
+	window_opacity off \
+	active_window_opacity 1.0 \
+	normal_window_opacity 0.7 \
 	insert_feedback_color 0xffd75f5f \
 	split_ratio 0.50 \
 	split_type auto \
@@ -32,9 +37,6 @@ yabai -m config \
 echo "yabai configuration loaded.."
 
 # unmanaged apps
-yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^1Password$" manage=off
-yabai -m rule --add app="^ExpressVPN$" manage=off
-yabai -m rule --add app="^Toggl Track$" manage=off
+yabai -m rule --add app="^(System Settings|1Password|ExpressVPN|Toggl Track)$" manage=off
 
 echo "yabai rules loaded..."
