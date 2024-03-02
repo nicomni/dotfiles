@@ -1,1 +1,4 @@
 symlinked/
+*.add.spl
+*.spl
+*.sug
