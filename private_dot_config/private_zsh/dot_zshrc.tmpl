@@ -28,7 +28,7 @@ export ZSH="{{ .chezmoi.homeDir }}/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git gh macos brew pyenv wd colorize
-  aliases common-aliases nvm npm node golang)
+  aliases common-aliases nvm npm node golang vi-mode)
 
 
 # ▲
@@ -109,20 +109,27 @@ source $ZSH/oh-my-zsh.sh
 
 # ▲
 
-# ▼ >>> conda initialize >>>
+# ▼ conda
+# >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('{{.chezmoi.homeDir}}/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('{{.chezmoi.homeDir}}/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "{{.chezmoi.homeDir}}/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "{{.chezmoi.homeDir}}/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "{{.chezmoi.homeDir}}/miniforge/base/etc/profile.d/conda.sh" ]; then
+        . "{{.chezmoi.homeDir}}/miniforge/base/etc/profile.d/conda.sh"
     else
-        export PATH="{{.chezmoi.homeDir}}/miniconda3/bin:$PATH"
+        export PATH="{{.chezmoi.homeDir}}/miniforge/base/bin:$PATH"
     fi
 fi
 unset __conda_setup
+
+if [ -f "{{.chezmoi.homeDir}}/miniforge/base/etc/profile.d/mamba.sh" ]; then
+    . "{{.chezmoi.homeDir}}/miniforge/base/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
+
+
 # ▲
 
 # ▼ FZM
@@ -131,13 +138,33 @@ unset __conda_setup
 
 # ▼ My personal configuration
 
+# ▼ Command history settings
+# Histfile is set in /etc/zshrc to $ZDOTDIR/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+# ▲
+
+
+# ▼ If conda environment is active, set conda bin path first in PATH
+if [[ -v CONDA_DEFAULT_ENV ]]; then
+  path=($CONDA_PREFIX/bin $path)
+  typeset -U PATH path
+  export PATH
+fi
+
+# ▲
+
 # ▼ Set some important path variables
 
 # Add go binaries to path
 path+=$(go env GOPATH)/bin
+
+# Add ~/.local/bin to path
+path+=~/.local/bin
+
+
 export PATH
 
-# Completions
 
 # ▲
 
@@ -155,10 +182,12 @@ alias oldvim="\vim"
 alias vimdiff="nvim -d"
 alias zshconf="chezmoi edit ~/.config/zsh/.zshrc"
 alias vimconf="chezmoi edit ~/.config/nvim/init.lua"
+alias yabaiconf="chezmoi edit ~/.config/yabai/yabairc"
+alias skhdconf="chezmoi edit ~/.config/skhd/skhdrc"
 alias cm="chezmoi"
 alias cms="chezmoi status"
 alias cme="chezmoi edit"
-alias tree="tree -C --gitignore"
+alias tree="tree -C"
 # Requires trash-cli to be in path.
 # See: https://github.com/sindresorhus/trash-cli
 alias rm="trash"
@@ -173,12 +202,8 @@ alias ll="gls -lFh --color --group-directories-first"
 alias la="gls -lAFh --color --group-directories-first"
 alias clr="clear"
 alias home="cd ~"
-alias zr="source ~/.config/zsh/.zshrc"
+alias zr="omz reload"
 alias v="fd --type f --hidden --follow --exclude .git | fzf --reverse --preview 'bat --color=always {}' | xargs nvim --listen /tmp/nvimsocket"
-
-{{- if eq .chezmoi.hostname "MBP-nnielsen" }}
-alias dev-geomdiff="cd ~/OneDrive-Personal/Masteroppgave/dev/geomdiff && conda activate geomdiff"
-{{- end }}
 # ▲
 #
 # ▼ GLOBAL ALIASES
@@ -203,7 +228,6 @@ export GPG_TTY
 # ▲
 
 # ▼ Compiler settings
-# For compilers to find zlib and bzip2 compression tools installed by Homebrew
 # ▲
 
 # ▲
@@ -225,3 +249,4 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
