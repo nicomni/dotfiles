@@ -20,8 +20,6 @@ Brewfile.lock.json
 .cache
 .cisco
 .conda
-.config/chezmoi
-.config/github-copilot
 .cups
 .docker
 .fzf*
@@ -51,3 +49,10 @@ miniforge
 repos
 Brewfile*
 texlive-packages.txt
+.grass7
+.ipython
+.psql_history
+.pytest_cache
+.python_history
+.sqlite_history
+iCloudDocs
