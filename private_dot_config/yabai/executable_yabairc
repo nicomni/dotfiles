@@ -28,15 +28,15 @@ yabai -m config \
 	left_padding 6 \
 	right_padding 6 \
 	window_gap 6 \
-	layout bsp \
-	mouse_modifier alt \
-	mouse_action1 move \
-	mouse_action2 resize \
-	mouse_drop_action swap
+	layout bsp
+# mouse_modifier ctrl+alt \
+# mouse_action1 move \
+# mouse_action2 resize \
+# mouse_drop_action swap
 
 echo "yabai configuration loaded.."
 
 # unmanaged apps
-yabai -m rule --add app="^(System Settings|1Password|ExpressVPN|Toggl Track)$" manage=off
+yabai -m rule --add app="^(System Settings|1Password|ExpressVPN)$" manage=off
 
 echo "yabai rules loaded..."
