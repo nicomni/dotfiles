@@ -6,6 +6,7 @@ local set = vim.opt
 local g = vim.g
 set.winbar = "%=%m %f"
 g.python3_host_prog = "{{.chezmoi.homeDir}}/.pyenv/versions/py3nvim/bin/python"
+g.markdown_folding = 1
 set.guifont = "Hack Nerd Font"
 set.foldlevel = 99
 {{- if eq .chezmoi.hostname "Nicolajs-MBP" }}
