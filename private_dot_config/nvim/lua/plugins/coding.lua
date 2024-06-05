@@ -17,4 +17,8 @@ return {
 			loader_lua.lazy_load({ paths = vim.list_extend({ "~/repos/snippetfiles/" }, vim.opt.runtimepath) })
 		end,
 	},
+	{
+		"zbirenbaum/copilot-cmp",
+		enabled = false,
+	},
 }
