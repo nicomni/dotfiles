@@ -39,4 +39,8 @@ echo "yabai configuration loaded.."
 # unmanaged apps
 yabai -m rule --add app="^(System Settings|1Password|ExpressVPN|FaceTime)$" manage=off
 
+# Fix behavior where tiled (managed) windows appear below floating windows.
+# See: https://github.com/koekeishiya/yabai/issues/1929#issuecomment-2003725298
+yabai -m rule --add app=".*" sub-layer=normal
+
 echo "yabai rules loaded..."
