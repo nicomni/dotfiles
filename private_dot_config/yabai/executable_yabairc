@@ -37,6 +37,6 @@ yabai -m config \
 echo "yabai configuration loaded.."
 
 # unmanaged apps
-yabai -m rule --add app="^(System Settings|1Password|ExpressVPN)$" manage=off
+yabai -m rule --add app="^(System Settings|1Password|ExpressVPN|FaceTime)$" manage=off
 
 echo "yabai rules loaded..."
