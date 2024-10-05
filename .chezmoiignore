@@ -3,7 +3,7 @@ README.md
 LICENSE
 
 .nvm/*
-!.nvm/default_packages
+!.nvm/default-packages
 
 .gnupg/*
 !.gnupg/gpg.conf
