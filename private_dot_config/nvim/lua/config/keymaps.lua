@@ -3,25 +3,10 @@
 -- Add any additional keymaps hereby
 
 local wk = require("which-key")
+local Editor = require("magganielsen.editor")
 
+local map = vim.keymap.set
 
-local keymaps = {
-	{
-		mode = "i",
-		["jk"] = { "<ESC>", "End insert mode" },
-	},
-	{
-		["<leader>ub"] = {
-			function()
-				if vim.o.background == "light" then
-					vim.o.background = "dark"
-				elseif vim.o.background == "dark" then
-					vim.o.background = "light"
-				end
-			end,
-			"Toggle dark/light mode",
-		},
-	},
-}
-
-wk.register(keymaps)
+map("i", "jk", "<ESC>", { silent = true, desc = "End insert mode" })
+map("n", "<leader>ub", Editor.toggle_background, { silent = true, desc = "Toggle dark/light mode" })
+map("n", "<leader>T", Editor.open_terminal, { silent = true, desc = "Open terminal" })
