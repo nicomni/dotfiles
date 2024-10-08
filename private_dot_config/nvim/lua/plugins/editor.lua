@@ -21,4 +21,12 @@ return {
       name = "window-picker",
     },
   },
+  {
+    "L3MON4D3/LuaSnip",
+    opts = {
+      load_ft_func = require("luasnip.extras.filetype_functions").extend_load_ft({
+        typescriptreact = { "typescript" },
+      }),
+    },
+  },
 }
