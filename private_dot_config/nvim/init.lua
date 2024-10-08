@@ -1,21 +1,38 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-local has_ls = pcall(require, "luasnip")
-if has_ls then
-	-- load my snippets
-	local lua_loader = require("luasnip.loaders.from_lua")
-	lua_loader.lazy_load({ paths = vim.list_extend({ "~/repos/snippetfiles/" }, vim.opt.rtp) })
+vim.api.nvim_create_autocmd("User", {
+  pattern = "LazyLoad",
+  callback = function(ev)
+    if ev.data ~= "LuaSnip" then
+      return
+    end
+    local has_ls, ls = pcall(require, "luasnip")
+    if has_ls then
+      -- load my snippets
+      local lua_loader = require("luasnip.loaders.from_lua")
+      local snippets_path = vim.fn.expand("~/repos/snippetfiles/luasnippets")
+      lua_loader.lazy_load({ paths = { snippets_path } })
 
-	-- add shelldoc snippets to shell files
-	local ls = require("luasnip")
-	ls.filetype_extend("zsh", { "shelldoc" })
-	ls.filetype_extend("sh", { "shelldoc" })
-end
+      -- add shelldoc snippets to shell files
+      ls.filetype_extend("zsh", { "shelldoc" })
+      ls.filetype_extend("sh", { "shelldoc" })
+
+      ls.filetype_extend("javascript", { "javascriptreact" })
+      ls.filetype_extend("typescript", { "typescriptreact" })
+      ls.filetype_extend("javascriptreact", { "javascript" })
+      ls.filetype_extend("typescriptreact", { "typescript" })
+    else
+      vim.notify("Could not load LuaSnip.", vim.log.levels.ERROR)
+    end
+  end,
+})
 
 -- Add filetype mappings:
 vim.filetype.add({
-	extension = {
-		geojson = "json",
-	},
+  extension = {
+    geojson = "json",
+  },
 })
+
+require("magganielsen.commands")
