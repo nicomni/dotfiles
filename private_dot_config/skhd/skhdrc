@@ -1,4 +1,4 @@
-# vim: foldmethod=marker
+# vim: foldmethod=marker foldlevel=0
 # ################################################################ #
 # THE FOLLOWING IS AN EXPLANATION OF THE GRAMMAR THAT SKHD PARSES. #
 # FOR SIMPLE EXAMPLE MAPPINGS LOOK FURTHER DOWN THIS FILE..        #
@@ -77,7 +77,12 @@
 #                             YABAI                               #
 #                        window-manager                           #
 # ############################################################### #
-# {{{
+# {{{ YABAI
+
+#
+# {{{ WINDOWS
+#
+
 
 # focus window
 alt - h : yabai -m window --focus west
@@ -147,7 +152,31 @@ ctrl + alt - k  : yabai -m window --grid 2:2:1:1:1:1
 shift + alt - c : yabai -m window --grid 4:4:1:1:2:2
 
 
-# SPACES
+
+# toggle window zoom
+alt - d : yabai -m window --toggle zoom-parent
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# toggle window split type
+# alt - e : yabai -m window --toggle split
+
+# float / unfloat window and center on screen
+# alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2 --layer below
+
+# float / unfloat window
+alt - t : yabai -m window --toggle float
+
+# toggle sticky(+float), topmost, picture-in-picture
+alt - p : yabai -m window --toggle sticky --toggle topmost --toggle pip
+
+# set insertion point in focused container
+# ctrl + alt - h : yabai -m window --insert west
+
+# }}} WINDOWS
+
+#
+# {{{ SPACES
+#
 
 # create desktop and follow focus
 ctrl + cmd - n : yabai -m space --create && \
@@ -178,17 +207,8 @@ alt + cmd - p : win_id="$(yabai -m query --windows --window | jq -r '.id')" && \
 ctrl + cmd - right : yabai -m space --focus next || yabai -m space --focus first
 ctrl + cmd - left : yabai -m space --focus prev || yabai -m space --focus last
 
-
 # destroy space
 shift + alt - d: yabai -m space --destroy
-
-# focus monitor
-# ctrl + alt - z  : yabai -m display --focus prev
-# ctrl + alt - 3  : yabai -m display --focus 3
-
-# send window to monitor and follow focus
-# ctrl + cmd - c  : yabai -m window --display next; yabai -m display --focus next
-# ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
 
 # move floating window
 # shift + ctrl - a : yabai -m window --move rel:-20:0
@@ -203,31 +223,31 @@ ctrl + cmd - l : yabai -m window east --resize left:20:0 2> /dev/null || yabai -
 # balance size of windows
 shift + alt - 0 : yabai -m space --balance
 
-# set insertion point in focused container
-# ctrl + alt - h : yabai -m window --insert west
-
-# toggle window zoom
-alt - d : yabai -m window --toggle zoom-parent
-alt - f : yabai -m window --toggle zoom-fullscreen
-
-# toggle window split type
-# alt - e : yabai -m window --toggle split
-
-# float / unfloat window and center on screen
-# alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2 --layer below
-
-# float / unfloat window
-alt - t : yabai -m window --toggle float
-
-# toggle sticky(+float), topmost, picture-in-picture
-alt - p : yabai -m window --toggle sticky --toggle topmost --toggle pip
-
 # rotate window tree clockwise
 alt - r : yabai -m space --rotate 270
 
 # rotate window tree anti-clockwise
 shift + alt - r : yabai -m space --rotate 90
+
+# toggle mission-cotrl
+ctrl + cmd - up : yabai -m space --toggle mission-control
 # }}}
+
+#
+# {{{ DISPLAYS
+#
+
+# focus monitor
+# ctrl + alt - z  : yabai -m display --focus prev
+# ctrl + alt - 3  : yabai -m display --focus 3
+
+# send window to monitor and follow focus
+# ctrl + cmd - c  : yabai -m window --display next; yabai -m display --focus next
+# ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
+
+# }}} DISPLAYS
+
+# }}} YABAI end
 
 
 # ############################################################### #
