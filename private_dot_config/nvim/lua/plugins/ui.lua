@@ -34,6 +34,7 @@ local ui = {
             enabled = true,
             font = "+10",
           },
+          twilight = { enabled = false },
         },
       })
     end,
