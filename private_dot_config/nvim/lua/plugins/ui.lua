@@ -41,19 +41,6 @@ local ui = {
     keys = keys["zen-mode"],
   },
   { "folke/twilight.nvim" },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    opts = {
-      exclude = {
-        filetypes = {
-          "lspinfo",
-          "checkhealth",
-          "man",
-          "qf",
-        },
-      },
-    },
-  },
 }
 
 return ui
