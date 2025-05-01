@@ -10,5 +10,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init --path)"
 
 # Set prefered editor
-export EDITOR='vi -e'
-export VISUAL='{{- if eq .chezmoi.arch "arm64" -}}/opt/homebrew{{- else -}}/usr/local{{- end -}}/bin/nvim --listen /tmp/nvimsocket'
+export VISUAL='{{- if eq .chezmoi.arch "arm64" -}}/opt/homebrew{{- else -}}/usr/local{{- end -}}/bin/nvim'
+export EDITOR=$VISUAL
