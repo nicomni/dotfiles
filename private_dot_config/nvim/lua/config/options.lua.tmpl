@@ -13,3 +13,11 @@ set.foldlevel = 99
 set.runtimepath:append({ "/opt/homebrew/share/vim/vimfiles" })
 {{- end }}
 g.lazyvim_prettier_needs_config = false
+-- Default LaxyVim options use the system clipboard (unnamedplus register)
+-- I don't want tha
+set.clipboard = ""
+-- Explicitly state what I want for indents, regardless of LazyVim defaults
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
