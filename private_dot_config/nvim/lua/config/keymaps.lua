@@ -10,9 +10,9 @@
 ---
 ---@see vim.keymap.set
 local function map(mode, lhs, rhs, opts)
-  opts = opts or {}
-  opts.silent = opts.silent ~= false -- Default to true unless explicitly set to false
-  vim.keymap.set(mode, lhs, rhs)
+	opts = opts or {}
+	opts.silent = opts.silent ~= false -- Default to true unless explicitly set to false
+	vim.keymap.set(mode, lhs, rhs)
 end
 
 map("i", "jk", "<ESC>", { desc = "End insert mode" })
@@ -23,5 +23,5 @@ map("v", "J", ":m '>+1<cr>gv=gv", { desc = "Move selection down one line" })
 map("n", "J", "mzJ`z:delmarks z<CR>", { desc = "Join lines. Keep cursor position" })
 
 map({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to system clipboard" })
-map({ "nv", "v" }, "<leader>d", '"_d', { desc = "Delete from universe!" })
+map({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete from universe!" })
 map("n", "Q", "<nop>") -- Just don't...
