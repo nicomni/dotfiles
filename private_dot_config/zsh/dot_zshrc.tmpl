@@ -144,7 +144,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 # ▲
 
-
 # ▼ If conda environment is active, set conda bin path first in PATH
 if [[ -v CONDA_DEFAULT_ENV ]]; then
   path=($CONDA_PREFIX/bin $path)
@@ -231,6 +230,12 @@ export GPG_TTY
 # ▲
 
 # ▼ Compiler settings
+# ▲
+
+# ▼ Other variables
+
+export MANPAGER='nvim +Man!'
+
 # ▲
 
 # ▲
