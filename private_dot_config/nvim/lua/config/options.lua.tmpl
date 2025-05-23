@@ -2,20 +2,18 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
-local set = vim.opt
-local g = vim.g
-set.winbar = "%=%m %f"
-g.python3_host_prog = "{{.chezmoi.homeDir}}/.pyenv/versions/py3nvim/bin/python"
-g.markdown_folding = 1
-set.guifont = "Hack Nerd Font"
-set.foldlevel = 99
+vim.opt.winbar = "%=%m %f"
+vim.g.python3_host_prog = "{{.chezmoi.homeDir}}/.pyenv/versions/py3nvim/bin/python"
+vim.g.markdown_folding = 1
+vim.opt.guifont = "Hack Nerd Font"
+vim.opt.foldlevel = 99
 {{- if eq .chezmoi.hostname "Nicolajs-MBP" }}
-set.runtimepath:append({ "/opt/homebrew/share/vim/vimfiles" })
+vim.opt.runtimepath:append({ "/opt/homebrew/share/vim/vimfiles" })
 {{- end }}
-g.lazyvim_prettier_needs_config = false
+vim.g.lazyvim_prettier_needs_config = false
 -- Default LaxyVim options use the system clipboard (unnamedplus register)
 -- I don't want tha
-set.clipboard = ""
+vim.opt.clipboard = ""
 -- Explicitly state what I want for indents, regardless of LazyVim defaults
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
