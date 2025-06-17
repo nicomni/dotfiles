@@ -1,6 +1,6 @@
 return {
-	{
-		"tmhedberg/SimpylFold",
-		ft = "python",
-	},
+  {
+    "tmhedberg/SimpylFold",
+    ft = "python",
+  },
 }

@@ -10,9 +10,9 @@
 ---
 ---@see vim.keymap.set
 local function map(mode, lhs, rhs, opts)
-	opts = opts or {}
-	opts.silent = opts.silent ~= false -- Default to true unless explicitly set to false
-	vim.keymap.set(mode, lhs, rhs)
+  opts = opts or {}
+  opts.silent = opts.silent ~= false -- Default to true unless explicitly set to false
+  vim.keymap.set(mode, lhs, rhs)
 end
 
 map("i", "jk", "<ESC>", { desc = "End insert mode" })
