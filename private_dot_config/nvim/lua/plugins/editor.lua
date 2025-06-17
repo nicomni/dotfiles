@@ -1,3 +1,4 @@
+---@module "snacks"
 ---@module "lazy.types"
 ---@type LazyPluginSpec[]
 return {
@@ -19,6 +20,21 @@ return {
     dependencies = {
       "s1n7ax/nvim-window-picker",
       name = "window-picker",
+    },
+  },
+  {
+    "folke/snacks.nvim",
+    ---@type snacks.Config
+    opts = {
+      ---@type snacks.picker.Config
+      picker = {
+        layout = {
+          cycle = true,
+          preset = function()
+            return vim.o.columns >= 160 and "default" or "vertical"
+          end,
+        },
+      },
     },
   },
 }
