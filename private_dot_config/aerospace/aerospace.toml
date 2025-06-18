@@ -174,3 +174,19 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
 
+[[on-window-detected]]
+# HACK: Workaround for https://github.com/nikitabobko/AeroSpace/issues/68
+#
+# This is a problem with MacOS native tabs. Not specific to AeroSpace.
+# Also observed here:
+#   * https://github.com/ghostty-org/ghostty/issues/1840
+#   * https://github.com/koekeishiya/yabai/issues/68
+#
+# Acknowledgement to fredrikaverpil's workaround here:
+# https://github.com/fredrikaverpil/dotfiles/blob/72f92cc92a98d19227c161e64a2843966ce99254/aerospace.toml#L2188
+# Discussed here: https://fredrikaverpil.github.io/blog/2024/12/04/ghostty-on-macos/#tabs-and-aerospace
+#
+# Discussed by Ghostty here: https://ghostty.org/docs/help/macos-tiling-wms#aerospace
+# Plans for custom tabbing solution in Ghostty exists.
+if.app-id="com.mitchellh.ghostty"
+run = "layout floating"
