@@ -14,7 +14,6 @@ LICENSE
 .Trash
 **/*/.zcompdump*
 **/*/.zsh_history
-Brewfile.lock.json
 
 .anyconnect
 .cache
