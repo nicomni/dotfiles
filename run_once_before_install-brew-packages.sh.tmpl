@@ -1,8 +1,7 @@
 {{- if eq .chezmoi.os "darwin" -}}
-#! /bin/bash
+#!/usr/bin/env bash
 
 brew bundle --file={{ .chezmoi.sourceDir }}/Brewfile
 
-[[ -f $HOME/.fzf.zsh ]] || $(brew --prefix)/opt/fzf/install
 
 {{ end -}}
