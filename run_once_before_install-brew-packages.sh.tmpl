@@ -1,7 +1,9 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
 
-brew bundle --file={{ .chezmoi.sourceDir }}/Brewfile
-
+# Brewfile hash: {{ include "private_dot_config/homebrew/symlinked/Brewfile" | sha256sum }}
+echo "⇒ Detected changes to Brewfile"
+brewfile="{{ .chezmoi.sourceDir }}/private_dot_config/homebrew/symlinked/Brewfile"
+brew bundle check --file="$brewfile" || brew bundle --file="$brewfile"
 
 {{ end -}}
