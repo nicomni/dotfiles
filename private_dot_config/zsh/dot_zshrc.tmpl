@@ -7,6 +7,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="{{ .chezmoi.homeDir }}/.oh-my-zsh"
 
+zstyle ':omz:lib:theme-and-appearance' gnu-ls yes
+
 # ▼ Plugins
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -112,11 +114,12 @@ alias rm="trash"
 # when the lid is closed (requires root permission)
 alias sleepoff="sudo pmset -b disablesleep 1"
 alias sleepon="sudo pmset -b disablesleep 0"
+
 # gls requires 'coreutils' to be installed with homebrew.
 # See: https://formulae.brew.sh/formula/coreutils
-alias l="gls -1Fh --color --group-directories-first"
-alias ll="gls -lFh --color --group-directories-first"
-alias la="gls -lAFh --color --group-directories-first"
+# alias l="gls -1Fh --color --group-directories-first"
+# alias ll="gls -lFh --color --group-directories-first"
+# alias la="gls -lAFh --color --group-directories-first"
 alias clr="clear"
 alias home="cd ~"
 alias zr="omz reload"
