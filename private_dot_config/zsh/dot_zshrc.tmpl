@@ -7,7 +7,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="{{ .chezmoi.homeDir }}/.oh-my-zsh"
 
-zstyle ':omz:lib:theme-and-appearance' gnu-ls yes
+zstyle ':omz:plugins:eza' 'dirs-first' yes
 
 # ▼ Plugins
 # Which plugins would you like to load?
@@ -16,7 +16,7 @@ zstyle ':omz:lib:theme-and-appearance' gnu-ls yes
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git gh macos brew pyenv wd colorize
-  aliases nvm npm node golang vi-mode)
+  aliases nvm npm node golang vi-mode eza)
 
 # ▲
 
