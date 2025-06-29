@@ -11,216 +11,216 @@ $time
 """
 
 [aws]
-symbol = "  "
+    symbol = "  "
 
 [buf]
-symbol = " "
+    symbol = " "
 
 [bun]
-symbol = " "
+    symbol = " "
 
 [c]
-symbol = " "
+    symbol = " "
 
 [cpp]
-symbol = " "
+    symbol = " "
 
 [cmake]
-symbol = " "
+    symbol = " "
 
 [conda]
-symbol = " "
+    symbol = " "
 
 [crystal]
-symbol = " "
+    symbol = " "
 
 [dart]
-symbol = " "
+    symbol = " "
 
 [deno]
-symbol = " "
+    symbol = " "
 
 [directory]
-read_only = " 󰌾"
-truncation_symbol = "⋯/"
-home_symbol = ""
+    read_only = " 󰌾"
+    truncation_symbol = "⋯/"
+    home_symbol = ""
 
 [docker_context]
-symbol = " "
+    symbol = " "
 
 [elixir]
-symbol = " "
+    symbol = " "
 
 [elm]
-symbol = " "
+    symbol = " "
 
 [fennel]
-symbol = " "
+    symbol = " "
 
 [fossil_branch]
-symbol = " "
+    symbol = " "
 
 [gcloud]
-symbol = "  "
+    symbol = "  "
 
 [git_branch]
-symbol = " "
+    symbol = " "
 
 [git_commit]
-tag_symbol = '  '
+    tag_symbol = '  '
 
 [git_metrics]
-disabled = false
+    disabled = false
 
 [golang]
-symbol = " "
+    symbol = " "
 
 [guix_shell]
-symbol = " "
+    symbol = " "
 
 [haskell]
-symbol = " "
+    symbol = " "
 
 [haxe]
-symbol = " "
+    symbol = " "
 
 [hg_branch]
-symbol = " "
+    symbol = " "
 
 [hostname]
-ssh_symbol = " "
+    ssh_symbol = " "
 
 [java]
-symbol = " "
+    symbol = " "
 
 [julia]
-symbol = " "
+    symbol = " "
 
 [kotlin]
-symbol = " "
+    symbol = " "
 
 [lua]
-symbol = " "
+    symbol = " "
 
 [memory_usage]
-format = '[$symbol](bright-red) [ram: $ram_pct( | swap: $swap_pct)]($style) '
-threshold = 75
-symbol = "󰍛 "
-style = 'bold red'
-disabled = false
+    format = '[$symbol](bright-red) [ram: $ram_pct( | swap: $swap_pct)]($style) '
+    threshold = 75
+    symbol = "󰍛 "
+    style = 'bold red'
+    disabled = false
 
 [meson]
-symbol = "󰔷 "
+    symbol = "󰔷 "
 
 [nim]
-symbol = "󰆥 "
+    symbol = "󰆥 "
 
 [nix_shell]
-symbol = " "
+    symbol = " "
 
 [nodejs]
-symbol = " "
+    symbol = " "
 
 [ocaml]
-symbol = " "
+    symbol = " "
 
 [os]
-disabled = false
+    disabled = false
 
 [os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CachyOS = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-Nobara = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
+    Alpaquita = " "
+    Alpine = " "
+    AlmaLinux = " "
+    Amazon = " "
+    Android = " "
+    Arch = " "
+    Artix = " "
+    CachyOS = " "
+    CentOS = " "
+    Debian = " "
+    DragonFly = " "
+    Emscripten = " "
+    EndeavourOS = " "
+    Fedora = " "
+    FreeBSD = " "
+    Garuda = "󰛓 "
+    Gentoo = " "
+    HardenedBSD = "󰞌 "
+    Illumos = "󰈸 "
+    Kali = " "
+    Linux = " "
+    Mabox = " "
+    Macos = " "
+    Manjaro = " "
+    Mariner = " "
+    MidnightBSD = " "
+    Mint = " "
+    NetBSD = " "
+    NixOS = " "
+    Nobara = " "
+    OpenBSD = "󰈺 "
+    openSUSE = " "
+    OracleLinux = "󰌷 "
+    Pop = " "
+    Raspbian = " "
+    Redhat = " "
+    RedHatEnterprise = " "
+    RockyLinux = " "
+    Redox = "󰀘 "
+    Solus = "󰠳 "
+    SUSE = " "
+    Ubuntu = " "
+    Unknown = " "
+    Void = " "
+    Windows = "󰍲 "
 
 [package]
-symbol = "󰏗 "
+    symbol = "󰏗 "
 
 [perl]
-symbol = " "
+    symbol = " "
 
 [php]
-symbol = " "
+    symbol = " "
 
 [pijul_channel]
-symbol = " "
+    symbol = " "
 
 [pixi]
-symbol = "󰏗 "
+    symbol = "󰏗 "
 
 [python]
-symbol = " "
+    symbol = " "
 
 [rlang]
-symbol = "󰟔 "
+    symbol = "󰟔 "
 
 [ruby]
-symbol = " "
+    symbol = " "
 
 [rust]
-symbol = "󱘗 "
+    symbol = "󱘗 "
 
 [scala]
-symbol = " "
+    symbol = " "
 
 [shell]
-disabled = true
+    disabled = true
 
 [shlvl]
-disabled = false
+    disabled = false
 
 [status]
-disabled = false
+    disabled = false
 
 [swift]
-symbol = " "
+    symbol = " "
 
 [time]
-disabled = false
+    disabled = false
 
 [zig]
-symbol = " "
+    symbol = " "
 
 [gradle]
-symbol = " "
+    symbol = " "
