@@ -15,9 +15,22 @@ zstyle ':omz:plugins:eza' 'dirs-first' yes
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gh macos brew pyenv wd colorize
-  aliases nvm npm node golang vi-mode eza)
-
+plugins=(
+    aliases
+    brew
+    colorize
+    eza
+    gh
+    git
+    golang
+    macos
+    node
+    npm
+    nvm
+    pyenv
+    vi-mode
+    wd
+)
 # ▲
 
 # ▲
@@ -57,6 +70,9 @@ source <(fzf --zsh)
 # ▲
 
 # ▼ My personal configuration
+
+# TODO: Add a custom welcome banner
+# TODO: Add a custom welcome message
 
 # ▼ Command history settings
 # Histfile is set in /etc/zshrc to $ZDOTDIR/.zsh_history
