@@ -23,5 +23,10 @@ vim.opt.runtimepath:append({ "/opt/homebrew/share/vim/vimfiles" })
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
+-- Overridee LazyVim's default timeoutlen:
+-- Historically LazyVim set this to 300 to reduce delay before triggering
+-- which-key, but which-key now supports an independent delay option since
+-- v3.0, which as of time of writing default to 200ms.
+vim.opt.timeoutlen = 1000
 vim.opt.winbar = "%=%m %f"
 
