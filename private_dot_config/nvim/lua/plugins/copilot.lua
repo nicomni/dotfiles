@@ -10,6 +10,9 @@ return {
           },
         },
       },
+      suggestion = {
+        auto_trigger = false,
+      },
     },
   },
 }
