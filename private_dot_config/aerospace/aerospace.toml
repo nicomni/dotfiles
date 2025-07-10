@@ -199,3 +199,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     # Plans for custom tabbing solution in Ghostty exists.
     if.app-id = "com.mitchellh.ghostty"
     run = "layout floating"
+
+[[on-window-detected]]
+    if.app-id = "com.macpaw.CleanMyMac5"
+    run = "layout floating"
+[[on-window-detected]]
+    if.window-title-regex-substring = 'Picture-in-Picture'
+    run = 'layout floating'
