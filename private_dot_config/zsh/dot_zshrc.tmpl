@@ -139,7 +139,7 @@ alias sleepon="sudo pmset -b disablesleep 0"
 alias clr="clear"
 alias home="cd ~"
 alias zr="omz reload"
-alias v="fd --type f --hidden --follow --exclude .git | fzf --reverse --preview 'bat --color=always {}' | xargs nvim --listen /tmp/nvimsocket"
+alias v="fd --type f --hidden --follow --exclude .git | fzf --print0 --reverse --preview 'bat --color=always {}' | xargs -0 -o nvim"
 alias pn=pnpm
 # ▲
 #
