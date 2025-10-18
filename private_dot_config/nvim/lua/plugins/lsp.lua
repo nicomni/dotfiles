@@ -2,9 +2,6 @@
 ---@type LazyPluginSpec[]
 return {
   {
-    "nvim-treesitter/playground",
-  },
-  {
     "nvim-lspconfig",
     opts = {
       --disable inlay-hints
