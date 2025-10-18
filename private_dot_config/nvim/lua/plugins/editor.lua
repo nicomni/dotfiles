@@ -38,7 +38,7 @@ return {
     },
   },
   {
-    "echasnovski/mini.align",
+    "nvim-mini/mini.align",
     version = "*",
     config = true,
   },
