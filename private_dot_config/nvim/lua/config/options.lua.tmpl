@@ -21,9 +21,8 @@ vim.opt.guifont = "Hack Nerd Font"
 {{- if eq .chezmoi.hostname "Nicolajs-MBP" }}
 vim.opt.runtimepath:append({ "/opt/homebrew/share/vim/vimfiles" })
 {{- end }}
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
-vim.opt.tabstop = 4
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 -- Overridee LazyVim's default timeoutlen:
 -- Historically LazyVim set this to 300 to reduce delay before triggering
 -- which-key, but which-key now supports an independent delay option since
