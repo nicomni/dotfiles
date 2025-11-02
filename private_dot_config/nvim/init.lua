@@ -51,3 +51,4 @@ vim.filetype.add({
 })
 
 require("magganielsen.commands")
+require("magganielsen.snippets")
