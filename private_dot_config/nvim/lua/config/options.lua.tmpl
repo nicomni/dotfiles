@@ -3,6 +3,10 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+-- if the completion engine supports the AI source,
+-- use that instead of inline suggestions
+vim.g.ai_cmp = false
+
 vim.g.lazyvim_prettier_needs_config = false
 vim.g.markdown_folding = 1
 vim.g.python3_host_prog = "{{.chezmoi.homeDir}}/.pyenv/versions/py3nvim/bin/python"
