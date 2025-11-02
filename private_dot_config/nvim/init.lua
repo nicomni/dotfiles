@@ -21,11 +21,12 @@ vim.api.nvim_create_autocmd("User", {
     if ev.data ~= "LuaSnip" then
       return
     end
-    local has_ls, ls = pcall(require, "luasnip")
+    local has_ls, ls_or_err = pcall(require, "luasnip")
     if has_ls then
+      local ls = ls_or_err
       -- load my snippets
       local lua_loader = require("luasnip.loaders.from_lua")
-      local snippets_path = vim.fn.expand("~/repos/snippetfiles/luasnippets")
+      local snippets_path = vim.fn.expand("~/dev/repos/nicomni/snippetfiles/luasnippets")
       lua_loader.lazy_load({ paths = { snippets_path } })
 
       -- add shelldoc snippets to shell files
@@ -37,7 +38,7 @@ vim.api.nvim_create_autocmd("User", {
       ls.filetype_extend("javascriptreact", { "javascript" })
       ls.filetype_extend("typescriptreact", { "typescript" })
     else
-      vim.notify("Could not load LuaSnip.", vim.log.levels.ERROR)
+      vim.notify(string.format("LuaSnip was not found: %s", ls_or_err), vim.log.levels.ERROR)
     end
   end,
 })
