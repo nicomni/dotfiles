@@ -26,6 +26,9 @@ require("lazy").setup({
     -- version = false, -- always use the latest git commit
     version = false, -- set to "*" to try installing the latest stable version for plugins that support semver
   },
+  dev = {
+    path = "~/dev/repos/nicomni",
+  },
   install = { colorscheme = { "tokyonight" } },
   checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
