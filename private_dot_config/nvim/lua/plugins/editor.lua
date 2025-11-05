@@ -8,6 +8,7 @@ return {
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
+    optional = true,
     opts = {
       filesystem = {
         filtered_items = {
@@ -24,6 +25,7 @@ return {
   },
   {
     "folke/snacks.nvim",
+    optional = true,
     ---@type snacks.Config
     opts = {
       ---@type snacks.picker.Config
