@@ -23,7 +23,10 @@ LICENSE
 .docker
 .fzf*
 .lesshst
-.local
+.local/*
+!.local/bin
+.local/bin/*
+!.local/bin/ynabconv
 .node_repl_history
 .npm
 .oh-my-zsh
